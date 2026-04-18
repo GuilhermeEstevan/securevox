@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --radius: 0.75rem;
+  --background: oklch(0.99 0.005 220);
+  --foreground: oklch(0.18 0.05 250);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.05 250);
+  --muted: oklch(0.96 0.01 220);
+  --muted-foreground: oklch(0.45 0.03 250);
+  --border: oklch(0.9 0.01 220);
+  --primary: oklch(0.72 0.15 210);
+  --navy: oklch(0.22 0.08 255);
+  --navy-deep: oklch(0.14 0.06 258);
+  --cyan-glow: oklch(0.78 0.16 215);
+  --cyan-soft: oklch(0.88 0.08 215);
+  --gradient-hero: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 55%, oklch(0.32 0.12 230) 100%);
+  --gradient-cyan: linear-gradient(135deg, var(--cyan-glow), oklch(0.65 0.18 220));
+  --shadow-glow: 0 0 40px -10px color-mix(in oklab, var(--cyan-glow) 60%, transparent);
+  --shadow-card: 0 10px 30px -12px color-mix(in oklab, var(--navy-deep) 30%, transparent);
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.text-glow {
+  text-shadow: 0 0 24px color-mix(in oklab, var(--cyan-glow) 50%, transparent);
+}
+
+.grid-pattern {
+  background-image:
+    linear-gradient(color-mix(in oklab, var(--cyan-glow) 8%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in oklab, var(--cyan-glow) 8%, transparent) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.balanced-wrap {
+  text-wrap: balance;
+}
+
+.interactive-card {
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease,
+    background-color 220ms ease;
+}
+
+.interactive-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    color-mix(in oklab, var(--cyan-glow) 14%, transparent),
+    transparent 45%,
+    color-mix(in oklab, var(--cyan-glow) 9%, transparent)
+  );
+  opacity: 0;
+  transition: opacity 220ms ease;
+  pointer-events: none;
+}
+
+.interactive-card:hover {
+  transform: translateY(-6px);
+  border-color: color-mix(in oklab, var(--cyan-glow) 36%, var(--border));
+  box-shadow:
+    var(--shadow-card),
+    0 18px 45px -18px color-mix(in oklab, var(--navy-deep) 35%, transparent);
+}
+
+.interactive-card:hover::before {
+  opacity: 1;
+}
