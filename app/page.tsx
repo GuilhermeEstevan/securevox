@@ -680,23 +680,6 @@ function Savings() {
                 </p>
               </div>
             </div>
-
-            <div className="mt-8 rounded-[1.5rem] border border-border/70 bg-slate-50 p-5">
-              <div className="flex items-center justify-between text-xs font-semibold uppercase tracking-[0.16em] text-slate-500">
-                <span>Economia média mensal</span>
-              </div>
-              <div className="mt-4 h-4 rounded-full bg-slate-200">
-                <div className="relative h-4 w-[60%] rounded-full bg-gradient-cyan shadow-glow">
-                  <span className="absolute right-3 top-1/2 -translate-y-1/2 text-[11px] font-bold uppercase tracking-[0.14em] text-[color:var(--navy-deep)]">
-                    40%
-                  </span>
-                </div>
-              </div>
-              <div className="mt-3 flex items-center justify-between text-sm text-muted-foreground">
-                <span>Tradicional</span>
-                <span>SecureVox Cloud</span>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -710,7 +693,7 @@ function UseCases() {
       icon: Headphones,
       title: "Call Centers",
       desc: "Gerencie grandes volumes de chamadas com filas inteligentes, monitoramento em tempo real e gravação automática.",
-      image: "/images/hero-callcenter.jpg",
+      image: "/images/case-callcenter.jpg",
     },
     {
       icon: TrendingDown,
@@ -722,13 +705,13 @@ function UseCases() {
       icon: Settings,
       title: "Suporte Técnico",
       desc: "Resolução ágil de tickets com histórico unificado e fácil escalonamento de chamadas entre níveis de suporte.",
-      image: "/images/datacenter.jpg",
+      image: "/images/case-support.jpg",
     },
     {
       icon: Smile,
       title: "Atendimento ao Cliente",
       desc: "Ofereça uma experiência humanizada e personalizada, com URA inteligente que direciona ao setor correto.",
-      image: "/images/team-comms.jpg",
+      image: "/images/case-customer.jpg",
     },
   ];
 
@@ -939,16 +922,16 @@ function FinalCta() {
                   href={WA}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex h-12 items-center gap-2 rounded-full bg-gradient-cyan px-7 font-semibold text-[color:var(--navy-deep)] shadow-glow transition-transform hover:scale-105"
+                  className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-gradient-cyan px-5 py-3 text-center font-semibold leading-tight text-[color:var(--navy-deep)] shadow-glow transition-transform hover:scale-105 sm:h-12 sm:w-auto sm:px-7 sm:py-0 sm:text-left"
                 >
-                  Solicitar demonstração SecureVox{" "}
-                  <ArrowRight className="h-4 w-4" />
+                  <span>Solicitar demonstração SecureVox</span>
+                  <ArrowRight className="h-4 w-4 shrink-0" />
                 </a>
                 <a
                   href={WA}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex h-12 items-center gap-2 rounded-full border border-white/30 px-7 transition-colors hover:bg-white/10"
+                  className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full border border-white/30 px-7 transition-colors hover:bg-white/10 sm:w-auto"
                 >
                   Falar no WhatsApp
                 </a>
