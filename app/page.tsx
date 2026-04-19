@@ -168,6 +168,11 @@ function Challenges() {
       title: "Imagem corporativa desatualizada",
       desc: "Sinais de ocupado e falta de atendimento profissional impactam a percepção do cliente.",
     },
+    {
+      icon: Activity,
+      title: "Falta de visibilidade operacional",
+      desc: "Sem relatórios e monitoramento em tempo real, fica difícil medir desempenho, identificar gargalos e evoluir o atendimento.",
+    },
   ];
 
   return (
