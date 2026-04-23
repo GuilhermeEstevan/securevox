@@ -37,15 +37,18 @@ export function SiteFooter() {
           <ul className="space-y-3 text-sm">
             <li className="flex items-center gap-2">
               <Phone className="h-4 w-4 text-[color:var(--cyan-glow)]" />
-              (81) 8131-2506
+              +55 81 9168-7155
             </li>
             <li className="flex items-center gap-2">
               <Mail className="h-4 w-4 text-[color:var(--cyan-glow)]" />
               contato@securevox.com.br
             </li>
-            <li className="flex items-center gap-2">
-              <MapPin className="h-4 w-4 text-[color:var(--cyan-glow)]" />
-              Recife · Brasil
+            <li className="flex items-start gap-2">
+              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[color:var(--cyan-glow)]" />
+              <span>
+                Rua da União, 557 - Sala 301 - Edf. Leite Maia - Santo Amaro -
+                CEP: 50050-055
+              </span>
             </li>
           </ul>
         </div>

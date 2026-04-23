@@ -89,7 +89,7 @@ export function SiteHeader() {
         </nav>
 
         <a
-          href="https://wa.me/558181312506?text=Quero%20conhecer%20a%20SecureVox"
+          href="https://wa.me/558191687155?text=Quero%20conhecer%20a%20SecureVox"
           target="_blank"
           rel="noopener noreferrer"
           className="hidden h-10 items-center justify-center rounded-full bg-gradient-cyan px-5 text-sm font-semibold text-[color:var(--navy-deep)] shadow-glow transition-transform hover:scale-105 md:inline-flex"
@@ -126,7 +126,7 @@ export function SiteHeader() {
             </a>
           ))}
           <a
-            href="https://wa.me/558181312506"
+            href="https://wa.me/558191687155"
             target="_blank"
             rel="noopener noreferrer"
             className="mt-2 rounded-full bg-gradient-cyan px-5 py-3 text-center font-semibold text-[color:var(--navy-deep)]"

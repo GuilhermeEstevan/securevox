@@ -10,7 +10,6 @@ import {
   DollarSign,
   GraduationCap,
   Headphones,
-  History,
   Home,
   Lock,
   MapPin,
@@ -28,18 +27,16 @@ import {
   Shield,
   Smile,
   Smartphone,
-  Target,
   TrendingDown,
   UserX,
   Users,
-  Zap,
 } from "lucide-react";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { WhatsAppFloat } from "@/components/whatsapp-float";
 
 const WA =
-  "https://wa.me/558181312506?text=Quero%20uma%20demonstra%C3%A7%C3%A3o%20da%20SecureVox";
+  "https://wa.me/558191687155?text=Quero%20uma%20demonstra%C3%A7%C3%A3o%20da%20SecureVox";
 
 export default function HomePage() {
   return (
@@ -214,6 +211,7 @@ function Solutions() {
     { icon: Home, label: "Ramais remotos para home office" },
     { icon: MessageSquare, label: "Integração oficial WhatsApp Business" },
     { icon: Briefcase, label: "Experiência corporativa moderna" },
+    { icon: Phone, label: "Portabilidade númerica" },
   ];
 
   return (
@@ -454,86 +452,78 @@ function Portfolio() {
 
 function Connectivity() {
   const features = [
-    { icon: Target, label: "Atendimento centralizado em uma única tela" },
-    { icon: History, label: "Histórico unificado de todas as conversas" },
-    { icon: Zap, label: "Respostas mais rápidas com automação" },
-    { icon: Smile, label: "Melhor experiência para o cliente" },
+    {
+      icon: MessageSquare,
+      label: "Comunicação oficial no WhatsApp com mais controle e estabilidade",
+    },
+    {
+      icon: Lock,
+      label:
+        "Mais segurança operacional, conformidade e proteção para a comunicação da empresa",
+    },
+    {
+      icon: Bot,
+      label:
+        "Automação multicanal com fluxos inteligentes para escalar o atendimento",
+    },
+    {
+      icon: Activity,
+      label:
+        "Dashboards e relatórios para acompanhar performance, filas e produtividade",
+    },
   ];
 
   return (
     <section className="relative overflow-hidden bg-[color:var(--navy-deep)] py-24 text-white">
       <div className="grid-pattern absolute inset-0 opacity-20" />
-      <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-2">
+      <div className="relative mx-auto grid max-w-7xl items-center gap-14 px-6 lg:grid-cols-[0.95fr_1.05fr]">
         <div>
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[color:var(--cyan-glow)]">
-            Conectividade total
+            API oficial e automação segura
           </span>
           <h2 className="mt-3 text-4xl font-bold leading-tight md:text-5xl">
-            Telefone + WhatsApp <br />+ Painel de Gestão
+            Chatbots Multicanais com <br />
+            API Oficial do WhatsApp
           </h2>
+          <p className="mt-5 max-w-xl text-white/75">
+            Estruture atendimentos automatizados com a API oficial, conecte
+            WhatsApp a uma operacao multicanal e acompanhe tudo em dashboards
+            gerenciais. Isso traz mais seguranca, estabilidade e controle para a
+            empresa, alem de uma experiencia mais confiavel para o cliente
+            final.
+          </p>
           <div className="mt-10 space-y-4">
             {features.map((feature) => (
-              <div key={feature.label} className="flex items-center gap-4">
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-[color:var(--cyan-glow)]/30 bg-[color:var(--cyan-glow)]/15">
-                  <feature.icon className="h-5 w-5 text-[color:var(--cyan-glow)]" />
+              <div
+                key={feature.label}
+                className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="mt-0.5 flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[color:var(--cyan-glow)]/30 bg-[color:var(--cyan-glow)]/15">
+                    <feature.icon className="h-5 w-5 text-[color:var(--cyan-glow)]" />
+                  </div>
+                  <span className="font-medium text-white/90">
+                    {feature.label}
+                  </span>
                 </div>
-                <span className="font-medium">{feature.label}</span>
               </div>
             ))}
           </div>
         </div>
         <div className="relative">
-          <div className="absolute inset-0 rounded-3xl bg-gradient-cyan opacity-20 blur-3xl" />
-          <div className="relative overflow-hidden rounded-2xl border border-white/20 bg-white text-foreground shadow-2xl">
-            <div className="flex items-center gap-2 border-b px-4 py-3">
-              <span className="h-3 w-3 rounded-full bg-red-400" />
-              <span className="h-3 w-3 rounded-full bg-yellow-400" />
-              <span className="h-3 w-3 rounded-full bg-green-400" />
-            </div>
-            <div className="space-y-3 p-6">
-              <ChatBubble side="left">
-                Olá, gostaria de saber mais sobre os planos corporativos.
-              </ChatBubble>
-              <ChatBubble side="right">
-                Claro! Nossa equipe pode agendar uma demo para sua empresa hoje
-                mesmo.
-              </ChatBubble>
-              <div className="text-[10px] font-bold uppercase text-green-600">
-                via WhatsApp
-              </div>
-              <ChatBubble side="left">
-                Isso seria ótimo. Pode ser às 14h?
-              </ChatBubble>
-              <ChatBubble side="right">Agendado! Enviaremos o link.</ChatBubble>
-            </div>
+          <div className="absolute inset-0 rounded-[2rem] bg-gradient-cyan opacity-20 blur-3xl" />
+          <div className="relative overflow-hidden rounded-[1.75rem] border border-white/15 bg-white/5 p-3 shadow-2xl backdrop-blur">
+            <Image
+              src="/images/dash1.png"
+              alt="Dashboard de atendimentos multicanais com indicadores, graficos e relatorios operacionais"
+              width={1466}
+              height={603}
+              className="w-full rounded-2xl border border-white/10 object-cover"
+            />
           </div>
         </div>
       </div>
     </section>
-  );
-}
-
-function ChatBubble({
-  side,
-  children,
-}: {
-  side: "left" | "right";
-  children: React.ReactNode;
-}) {
-  return (
-    <div
-      className={`flex ${side === "right" ? "justify-end" : "justify-start"}`}
-    >
-      <div
-        className={`max-w-[80%] rounded-2xl px-4 py-2 text-sm ${
-          side === "right"
-            ? "rounded-br-sm bg-[color:var(--cyan-glow)]/30 text-foreground"
-            : "rounded-bl-sm bg-muted text-foreground"
-        }`}
-      >
-        {children}
-      </div>
-    </div>
   );
 }
 
