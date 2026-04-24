@@ -37,7 +37,7 @@ export function SiteFooter() {
           <ul className="space-y-3 text-sm">
             <li className="flex items-center gap-2">
               <Phone className="h-4 w-4 text-[color:var(--cyan-glow)]" />
-              +55 81 9168-7155
+              +55 81 99168-7155
             </li>
             <li className="flex items-center gap-2">
               <Mail className="h-4 w-4 text-[color:var(--cyan-glow)]" />
